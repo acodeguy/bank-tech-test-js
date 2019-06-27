@@ -8,4 +8,11 @@ describe('Account', function() {
       assert.equal(sut.balance, 0);
     });
   });
+
+  describe('#deposit', function() {
+    it('does not accept negative values', function() {
+      var sut = new Account();
+      assert.throws(() => sut.deposit(-1), Error, 'Cannot deposit negative value.');
+    });
+  })
 });
