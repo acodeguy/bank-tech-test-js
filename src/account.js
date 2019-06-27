@@ -8,6 +8,8 @@ class Account {
       throw new Error('Only numbers accepted.');
     } else if(amount < 0) {
       throw new Error('Cannot deposit negative value.');
+    } else {
+      this.balance += amount;
     }
   }
 }

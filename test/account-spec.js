@@ -28,5 +28,11 @@ describe('Account', function() {
         'Only numbers accepted.'
       )
     });
+
+    it('increases the balance by the amount deposited', function() {
+      var sut = new Account();
+      sut.deposit(10);
+      assert.equal(sut.balance, 10);
+    });
   })
 });
