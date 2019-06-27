@@ -14,5 +14,19 @@ describe('Account', function() {
       var sut = new Account();
       assert.throws(() => sut.deposit(-1), Error, 'Cannot deposit negative value.');
     });
+
+    it('only accepts numbers', function() {
+      var sut = new Account();
+      assert.throws(
+        () => sut.deposit('hello'),
+        Error,
+        'Only numbers accepted.'
+      )
+      assert.throws(
+        () => sut.deposit(true),
+        Error,
+        'Only numbers accepted.'
+      )
+    });
   })
 });
