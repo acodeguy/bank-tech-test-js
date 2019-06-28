@@ -58,6 +58,12 @@ describe('Account', function() {
         Error,
         'Only numbers accepted.'
       );
-    });    
+    });
+
+    it('decreases the balance by the amount withdrawn', function() {
+      var sut = new Account();
+      sut.withdraw(10);
+      assert.equal(sut.balance, -10);
+    });
   });
 });

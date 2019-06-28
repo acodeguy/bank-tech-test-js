@@ -18,6 +18,8 @@ class Account {
       throw new Error('Only numbers accepted.');
     } else if(amount < 0) {
       throw new Error('Cannot withdraw negative amounts.');
+    } else {
+      this.balance -= amount;
     }
   }
 }
