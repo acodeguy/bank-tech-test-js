@@ -35,5 +35,17 @@ describe('Account', function() {
       sut.transact(-10);
       assert.equal(sut.balance, -10);
     });
+
+    it('adds a log to the transaction history', function() {
+      var sut = new Account();
+      sut.transact(5);
+      let today = new Date();
+      var expectedTransaction = {
+        'date': today,
+        'amount': 5,
+        'balance': 5
+      }
+      assert.deepEqual(sut.transactionHistory, [expectedTransaction]);
+    });
   });
 });
