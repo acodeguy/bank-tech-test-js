@@ -53,6 +53,11 @@ describe('Account', function() {
         Error,
         'Only numbers accepted.'
       );
-    });
+      assert.throws(
+        () => sut.withdraw(false),
+        Error,
+        'Only numbers accepted.'
+      );
+    });    
   });
 });
