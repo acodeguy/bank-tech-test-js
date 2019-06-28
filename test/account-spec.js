@@ -34,5 +34,16 @@ describe('Account', function() {
       sut.deposit(10);
       assert.equal(sut.balance, 10);
     });
-  })
+  });
+
+  describe('#withdraw', function() {
+    it('does not accept negative values', function() {
+      var sut = new Account();
+      assert.throws(
+        () => sut.withdraw(-1),
+        Error,
+        'Cannot withdraw negative amounts.'
+      );
+    });
+  });
 });

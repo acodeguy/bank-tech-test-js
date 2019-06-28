@@ -12,6 +12,12 @@ class Account {
       this.balance += amount;
     }
   }
+
+  withdraw(amount) {
+    if(amount < 0) {
+      throw new Error('Cannot withdraw negative amounts.');
+    }
+  }
 }
 
 module.exports = exports = Account;
