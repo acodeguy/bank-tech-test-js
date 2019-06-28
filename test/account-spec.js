@@ -9,60 +9,30 @@ describe('Account', function() {
     });
   });
 
-  describe('#deposit', function() {
-    it('does not accept negative values', function() {
-      var sut = new Account();
-      assert.throws(() => sut.deposit(-1), Error, 'Cannot deposit negative value.');
-    });
-
+  describe('#transact', function() {
     it('only accepts numbers', function() {
       var sut = new Account();
       assert.throws(
-        () => sut.deposit('hello'),
+        () => sut.transact('hello'),
         Error,
         'Only numbers accepted.'
       )
       assert.throws(
-        () => sut.deposit(true),
+        () => sut.transact(true),
         Error,
         'Only numbers accepted.'
       )
     });
 
-    it('increases the balance by the amount deposited', function() {
+    it('increases the balance when given a positive amount', function() {
       var sut = new Account();
-      sut.deposit(10);
+      sut.transact(10);
       assert.equal(sut.balance, 10);
     });
-  });
 
-  describe('#withdraw', function() {
-    it('does not accept negative values', function() {
+    it('decreases the balance when given a negative amount', function() {
       var sut = new Account();
-      assert.throws(
-        () => sut.withdraw(-1),
-        Error,
-        'Cannot withdraw negative amounts.'
-      );
-    });
-
-    it('only accepts numbers', function() {
-      var sut = new Account();
-      assert.throws(
-        () => sut.withdraw('goodbye'),
-        Error,
-        'Only numbers accepted.'
-      );
-      assert.throws(
-        () => sut.withdraw(false),
-        Error,
-        'Only numbers accepted.'
-      );
-    });
-
-    it('decreases the balance by the amount withdrawn', function() {
-      var sut = new Account();
-      sut.withdraw(10);
+      sut.transact(-10);
       assert.equal(sut.balance, -10);
     });
   });

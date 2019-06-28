@@ -3,23 +3,11 @@ class Account {
     this.balance = 0;
   }
 
-  deposit(amount) {
+  transact(amount) {
     if(typeof amount != 'number') {
       throw new Error('Only numbers accepted.');
-    } else if(amount < 0) {
-      throw new Error('Cannot deposit negative value.');
     } else {
       this.balance += amount;
-    }
-  }
-
-  withdraw(amount) {
-    if(typeof amount != 'number') {
-      throw new Error('Only numbers accepted.');
-    } else if(amount < 0) {
-      throw new Error('Cannot withdraw negative amounts.');
-    } else {
-      this.balance -= amount;
     }
   }
 }
