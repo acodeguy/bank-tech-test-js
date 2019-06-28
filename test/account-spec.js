@@ -45,5 +45,14 @@ describe('Account', function() {
         'Cannot withdraw negative amounts.'
       );
     });
+
+    it('only accepts numbers', function() {
+      var sut = new Account();
+      assert.throws(
+        () => sut.withdraw('goodbye'),
+        Error,
+        'Only numbers accepted.'
+      );
+    });
   });
 });
