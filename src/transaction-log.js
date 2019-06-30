@@ -1,11 +1,11 @@
 class TransactionLog {
-  constructor() {
-    this.history = [];
+  constructor () {
+    this.history = []
   }
 
-  add(transaction) {
-    this.history.push(transaction);
+  add (transaction) {
+    this.history.push(transaction)
   }
 }
 
-module.exports = TransactionLog;
+module.exports = TransactionLog
