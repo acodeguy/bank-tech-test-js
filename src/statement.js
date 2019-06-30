@@ -4,13 +4,13 @@ class Statement {
   }
 
   print () {
-    var statement = 'date || credit || debit || balance\n'
+    var statement = "date || credit || debit || balance\n"
 
     this.transactionLog.forEach((transaction) => {
       statement += Statement.getShortDate(transaction.date)
-      if (transaction.amount > 0) { statement += ' || ' + Statement.formatCurrency(transaction.amount) + ' ||' }
+      if (transaction.amount > 0) { statement += " || " + Statement.formatCurrency(transaction.amount) + " ||" }
       if (transaction.amount < 0) { statement += ' || || ' + Statement.formatCurrency(transaction.amount) }
-      statement += ' || ' + Statement.formatCurrency(transaction.balance) + '\n'
+      statement += " || " + Statement.formatCurrency(transaction.balance) + "\n"
     })
     return statement
   }
@@ -19,11 +19,11 @@ class Statement {
     let date = dateObj.getDate()
     let month = dateObj.getMonth() + 1
     let year = dateObj.getFullYear()
-    return date + '/' + month + '/' + year
+    return date + "/" + month + "/" + year
   }
 
   static formatCurrency (amount) {
-    return amount.toFixed(2).replace('-', '')
+    return amount.toFixed(2).replace("-", "")
   }
 }
 

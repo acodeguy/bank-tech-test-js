@@ -1,14 +1,14 @@
-var assert = require('assert')
-var TransactionLog = require('../src/transaction-log')
+var assert = require("assert")
+var TransactionLog = require("../src/transaction-log")
 
-describe('TransactionLog', function () {
-  describe('#add', function () {
-    it('adds a new transaction to the log', function () {
+describe("TransactionLog", function () {
+  describe("#add", function () {
+    it("adds a new transaction to the log", function () {
       let dateNow = new Date()
       let transaction = {
-        'date': dateNow,
-        'amount': 5,
-        'balance': 5
+        "date": dateNow,
+        "amount": 5,
+        "balance": 5
       }
       var sut = new TransactionLog()
 
