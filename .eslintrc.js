@@ -15,6 +15,6 @@ module.exports = {
     'sourceType': 'module'
   },
   'rules': {
-    'quotes': ['warn', 'single']
+    'quotes': ['warn', 'double']
   }
 }
