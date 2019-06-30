@@ -36,7 +36,7 @@ describe('Account', function() {
       assert.equal(sut.balance, -10);
     });
 
-    it('adds a log to the transaction history', function() {
+    it('adds a transaction to the transaction history', function() {
       var sut = new Account();
       sut.transact(5);
       let today = new Date();
@@ -45,7 +45,7 @@ describe('Account', function() {
         'amount': 5,
         'balance': 5
       }
-      assert.deepEqual(sut.transactionHistory, [expectedTransaction]);
+      assert.deepEqual(sut.transactionLog.history, [expectedTransaction]);
     });
   });
 });

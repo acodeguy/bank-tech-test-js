@@ -1,7 +1,9 @@
+var TransactionLog = require('../src/transaction-log');
+
 class Account {
-  constructor() {
+  constructor(transactionLog = new TransactionLog()) {
     this.balance = 0;
-    this.transactionHistory = [];
+    this.transactionLog = transactionLog;
   }
 
   transact(amount) {
@@ -9,13 +11,12 @@ class Account {
       throw new Error('Only numbers accepted.');
     } else {
       this.balance += amount;
-      this.transactionHistory.push(
-        {
-          'date': new Date(),
-          'amount': amount,
-          'balance': this.balance
-        }
-      );
+      let transaction = {
+        'date': new Date(),
+        'amount': amount,
+        'balance': this.balance
+      }
+      this.transactionLog.add(transaction);
     }
   }
 }
