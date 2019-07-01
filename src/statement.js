@@ -1,6 +1,10 @@
 class Statement {
   constructor (transactionLogData) {
-    this.transactionLog = transactionLogData
+    this._transactionLog = transactionLogData
+  }
+
+  get transactionLog () {
+    return this._transactionLog
   }
 
   print () {
