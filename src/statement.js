@@ -7,6 +7,10 @@ class Statement {
     return this._transactionLog
   }
 
+  set transactionLog (newTransactionLog) {
+    this._transactionLog = newTransactionLog
+  }
+
   print () {
     var statement = "date || credit || debit || balance\n"
 
