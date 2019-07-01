@@ -2,8 +2,24 @@ var TransactionLog = require("../src/transaction-log")
 
 class Account {
   constructor (transactionLog = new TransactionLog()) {
-    this.balance = 0
-    this.transactionLog = transactionLog
+    this._balance = 0
+    this._transactionLog = transactionLog
+  }
+
+  get balance () {
+    return this._balance
+  }
+
+  set balance (newBalance) {
+    this._balance = newBalance
+  }
+
+  get transactionLog () {
+    return this._transactionLog
+  }
+
+  set transactionLog (newTransactionLog) {
+    this._transactionLog = newTransactionLog
   }
 
   transact (amount) {
