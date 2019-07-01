@@ -13,7 +13,7 @@ class Statement {
     this.transactionLog.forEach((transaction) => {
       statement += Statement.getShortDate(transaction.date)
       if (transaction.amount > 0) { statement += " || " + Statement.formatCurrency(transaction.amount) + " ||" }
-      if (transaction.amount < 0) { statement += ' || || ' + Statement.formatCurrency(transaction.amount) }
+      if (transaction.amount < 0) { statement += " || || " + Statement.formatCurrency(transaction.amount) }
       statement += " || " + Statement.formatCurrency(transaction.balance) + "\n"
     })
     return statement
