@@ -1,6 +1,6 @@
 # Bank Tech Test
 ## JavaScript Edition
-[![Build Status](https://travis-ci.org/acodeguy/bank-tech-test-js.svg?branch=master)](https://travis-ci.org/acodeguy/bank-tech-test-js) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d1b41d6aad8f4ff9b7a5d05599327b2e)](https://www.codacy.com/app/acodeguy/bank-tech-test-js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=acodeguy/bank-tech-test-js&amp;utm_campaign=Badge_Grade) [![Maintainability](https://api.codeclimate.com/v1/badges/58fef76e8a703e1d5ece/maintainability)](https://codeclimate.com/github/acodeguy/bank-tech-test-js/maintainability)
+[![Build Status](https://travis-ci.org/acodeguy/bank-tech-test-js.svg?branch=master)](https://travis-ci.org/acodeguy/bank-tech-test-js) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d1b41d6aad8f4ff9b7a5d05599327b2e)](https://www.codacy.com/app/acodeguy/bank-tech-test-js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=acodeguy/bank-tech-test-js&amp;utm_campaign=Badge_Grade) [![Maintainability](https://api.codeclimate.com/v1/badges/58fef76e8a703e1d5ece/maintainability)](https://codeclimate.com/github/acodeguy/bank-tech-test-js/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/58fef76e8a703e1d5ece/test_coverage)](https://codeclimate.com/github/acodeguy/bank-tech-test-js/test_coverage)
 
 Create a REPL/JS Console app that simulates a bank account with common actions like deposits, withdrawals and statements
 
