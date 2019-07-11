@@ -7,12 +7,8 @@ class TransactionLog {
     return this._history
   }
 
-  set history (newHistory) {
-    this._history = newHistory
-  }
-
   add (transaction) {
-    this.history.push(transaction)
+    this._history.push(transaction)
   }
 }
 
