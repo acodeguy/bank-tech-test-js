@@ -4,13 +4,13 @@ class Statement {
   }
 
   get transactionLog () {
-    return this._transactionLog
+    return this._transactionLog.history
   }
 
   print () {
     var statement = "date || credit || debit || balance\n"
 
-    this._transactionLog.forEach((transaction) => {
+    this.transactionLog.forEach((transaction) => {
       statement += Statement.getShortDate(transaction.date)
       if (transaction.amount > 0) { statement += " || " + Statement.formatCurrency(transaction.amount) + " ||" }
       if (transaction.amount < 0) { statement += " || || " + Statement.formatCurrency(transaction.amount) }
