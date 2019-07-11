@@ -4,7 +4,7 @@ class Statement {
   }
 
   get transactionLog () {
-    return this._transactionLog.history
+    return this._transactionLog.history.reverse()
   }
 
   print () {
