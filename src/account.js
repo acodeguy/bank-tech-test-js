@@ -18,10 +18,6 @@ class Account {
     return this._transactionLog
   }
 
-  set transactionLog (newTransactionLog) {
-    this._transactionLog = newTransactionLog
-  }
-
   transact (amount) {
     if (typeof amount !== "number") {
       throw new Error("Only numbers accepted.")
@@ -32,7 +28,7 @@ class Account {
         "amount": amount,
         "balance": this.balance
       }
-      this.transactionLog.add(transaction)
+      this._transactionLog.add(transaction)
     }
   }
 }
